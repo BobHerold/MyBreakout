@@ -1,12 +1,13 @@
 * { padding: 0; margin: 0; }
 
+/* this is our HTML5 drawing element upon which we will place our blocks, ball, paddle, etc.*/
 canvas { background: #ffca7a; 
          display: block;
-         margin: 0 auto:
+         margin: 0 auto;
 }
 
 #theCanvas {
-        width : 30em;
-        height: 20em;
+        width : 960;
+        height: 640;
 }        
     
