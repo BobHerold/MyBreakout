@@ -6,6 +6,15 @@ var dx = 2;
 var dy = -2;  //these variables give a small value to the x & y variables after every frame has been drawn on canvas, to make the ball move//
 var ballRadius = 10; //holds the radius of the drawn ball and is used for calculations//
 
+// below are our variables defining our racket to hit the ball with//
+var racketHeight = 10;
+var racketWidth = 75;
+var racketX = (canvas.width-racketWidth) / 2;  // this gives the racket's starting point on the x axis//
+
+// below are the control buttons for the racket, set at false as they start out by not being pressed//
+var rightPressed = false;
+var leftPressed = false;
+
 //below is the function that will draw the ball on our canvas//
 function drawBall() {
     ctx.beginPath();
@@ -13,7 +22,14 @@ function drawBall() {
     ctx.fillStyle = "#f56038" //color of the ball//
     ctx.fill();
     ctx.closePath();
-    
+}
+// below is the function that will draw our racket or paddle on the canvas//
+function drawRacket() {
+    ctx.beginPath();
+    ctx.rect(racketX, canvas.height-racketHeight, racketWidth, racketHeight);
+    ctx.fillStyle = "#12492f";
+    ctx.fill();
+    ctx.closePath();
 }
 // the below function clears the canvas, and calls for it to redraw the ball in a new position every 10 miliseconds//
 function draw(){
