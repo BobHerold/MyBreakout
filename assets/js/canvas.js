@@ -28,7 +28,6 @@ function keyDownHandler (e) {
         leftPressed = true;
     }
 }
-
 //function below will run code when a key is released//
 function keyUpHandler(e) {
     if (e.key == "Right" || e.key == "ArrowRight") {
@@ -60,13 +59,30 @@ function drawRacket() {
 // the below function clears the canvas, and calls for it to redraw the ball in a new position every 10 miliseconds//
 function draw(){
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
+
     drawBall();
+    drawRacket();
+    
         if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
             dx = -dx;    // this formulates whether the ball has hit the left or right walls of the canvas, if so, it reverses the ball's direction//
         }
         if(y + dy > canvas.height-ballRadius  || y + dy < ballRadius) {
             dy = -dy;  //this formulates whether the ball has collided with the top or bottom of the canvas, and then reverses the ball's direction//
         }  //Both of the above if statements are our "collision detection"//
+
+        if (rightPressed) {
+            racketX += 7; //this will move our racket 7px to the right//
+            if (racketX + racketWidth > canvas.width) {
+                racketX = canvas.width - racketWidth; // this if statement keeps our racket from flying off the side of our canvas//
+            }
+        }
+        else if (leftPressed) {
+            racketX -= 7; //this moves our racket 7px to left on each frame rendering//
+            if (racketX < 0) {
+                racketX = 0;
+            }
+
+        }
     
     x += dx;
     y += dy;
