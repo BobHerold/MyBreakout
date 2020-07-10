@@ -11,9 +11,35 @@ var racketHeight = 10;
 var racketWidth = 75;
 var racketX = (canvas.width-racketWidth) / 2;  // this gives the racket's starting point on the x axis//
 
-// below are the control buttons for the racket, set at false as they start out by not being pressed//
+// below are the control button's variables for the racket, set at false as they start out by not being pressed//
 var rightPressed = false;
 var leftPressed = false;
+
+// the EventListeners below will tell us when buttons are pressed, allowing us to then run some code accordingly//
+document.addEventListener ("keydown", keyDownHandler, false);
+document.addEventListener ("keyup", keyUpHandler, false);
+
+//function below will execute the code when a key is pressed down//
+function keyDownHandler (e) {
+    if (e.key == "Right"  || e.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+
+//function below will run code when a key is released//
+function keyUpHandler(e) {
+    if (e.key == "Right" || e.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if (e.key == "Left" || e.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+
 
 //below is the function that will draw the ball on our canvas//
 function drawBall() {
