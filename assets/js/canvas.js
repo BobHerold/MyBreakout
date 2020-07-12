@@ -63,12 +63,22 @@ function draw(){
     drawBall();
     drawRacket();
     
-        if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+        if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
             dx = -dx;    // this formulates whether the ball has hit the left or right walls of the canvas, if so, it reverses the ball's direction//
         }
-        if(y + dy > canvas.height-ballRadius  || y + dy < ballRadius) {
-            dy = -dy;  //this formulates whether the ball has collided with the top or bottom of the canvas, and then reverses the ball's direction//
-        }  //Both of the above if statements are our "collision detection"//
+        if (y + dy < ballRadius) {
+            dy = -dy;  //this formulates whether the ball has collided with the top if the canvas and then reverses the ball's direction//
+        }  //Both of the above if statements are "collision detection"//
+        else if(y + dy > canvas.height-ballRadius) {
+            if(x > racketX && x < racketX + racketWidth) {  //this line is our collision detection between the ball and the racket, by checking to see if the center of the ball is between the racket width//
+                dy = -dy;
+            }
+            else {
+            alert("GAME HAS ENDED"); // this happens when the ball hits the bottom of the canvas and not the racket//
+            document.location.reload();
+            clearInterval(interval); //Needed for Chrome to end game//
+            }
+        }
 
         if (rightPressed) {
             racketX += 7; //this will move our racket 7px to the right//
@@ -88,4 +98,4 @@ function draw(){
     y += dy;
 
 }
-setInterval (draw, 10);
+ var interval = setInterval (draw, 10);
