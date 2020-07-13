@@ -64,7 +64,7 @@ function drawBall() {
     ctx.fill();
     ctx.closePath();
 }
-// below is the function that will draw our racket or paddle on the canvas//
+// below is the function that will draw our racket on the canvas//
 function drawRacket() {
     ctx.beginPath();
     ctx.rect(racketX, canvas.height-racketHeight, racketWidth, racketHeight);
@@ -73,12 +73,28 @@ function drawRacket() {
     ctx.closePath();
 }
 //below is the code that will loop thru all the blocks in the array and draw them on the canvas in their correct positions//
+function drawBlocks() {
+    for(var c=0; c<blockColumnCount; c++) {
+        for(var r=0; r<blockRowCount; r++) {
+            var blockX = (c*(blockWidth+blockPadding)) +blockOffsetLeft; //this formula gives us the block's x position in each column//
+            var blockY = (r*(blockHeight+blockPadding)) +blockOffsetTop; //this gives us the Y or height position of each block in each row//
+            blocks[c] [r].x = blockX;
+            blocks[c] [r].y = blockY;
+            ctx.beginPath();
+            ctx.rect(blockX, blockY, blockWidth, blockHeight);
+            ctx.fillStyle = "#0a2f35";
+            ctx.fill();
+            ctx.closePath();
+        }
+    }
+}
 
 
-// the below function clears the canvas, and calls for it to redraw the ball in a new position every 10 miliseconds//
-function draw(){
+// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every 10 miliseconds//
+function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
 
+    drawBlocks();
     drawBall();
     drawRacket();
     
