@@ -27,7 +27,7 @@ var blocks = [];
 for (var c=0; c<blockColumnCount; c++) {
     blocks[c] = [];
     for (var r=0; r<blockRowCount; r++) {
-        blocks[c] [r] = { x: 0, y: 0};
+        blocks[c] [r] = { x: 0, y: 0, status: 1}; //the status will tell the code whether to redraw the block after a collision w/ball in function, collision detection//
     }
 }
 
@@ -53,6 +53,20 @@ function keyUpHandler(e) {
         leftPressed = false;
     }
 }
+//below code is our collision detection for our blocks; if center of ball is within 4 coordinates of a block, block will break, ball will change direction, block will disappear//
+function collisionDetection() {
+    for (var c=0; c<blockColumnCount; c++) {
+        for (var r=0; r<blockRowCount; r++) {
+            var b = blocks[c][r];
+            if(b.status == 1) {
+                if(x > b.x && x < b.x+blockWidth && y > b.y && y < b.y+blockHeight) {
+                dy = -dy;
+                b.status = 0;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -76,15 +90,17 @@ function drawRacket() {
 function drawBlocks() {
     for(var c=0; c<blockColumnCount; c++) {
         for(var r=0; r<blockRowCount; r++) {
-            var blockX = (c*(blockWidth+blockPadding)) +blockOffsetLeft; //this formula gives us the block's x position in each column//
-            var blockY = (r*(blockHeight+blockPadding)) +blockOffsetTop; //this gives us the Y or height position of each block in each row//
-            blocks[c] [r].x = blockX;
-            blocks[c] [r].y = blockY;
-            ctx.beginPath();
-            ctx.rect(blockX, blockY, blockWidth, blockHeight);
-            ctx.fillStyle = "#0a2f35";
-            ctx.fill();
-            ctx.closePath();
+            if(blocks[c] [r].status ==1) { //this line checks status to see if block had a collision, it it's 1 then draw the block, 0 and it was hit by ball//
+                var blockX = (c*(blockWidth+blockPadding)) +blockOffsetLeft; //this formula gives us the block's x position in each column//
+                var blockY = (r*(blockHeight+blockPadding)) +blockOffsetTop; //this gives us the Y or height position of each block in each row//
+                blocks[c] [r].x = blockX;
+                blocks[c] [r].y = blockY;
+                ctx.beginPath();
+                ctx.rect(blockX, blockY, blockWidth, blockHeight);
+                ctx.fillStyle = "#0a2f35";
+                ctx.fill();
+                ctx.closePath();
+            }
         }
     }
 }
@@ -97,6 +113,7 @@ function draw() {
     drawBlocks();
     drawBall();
     drawRacket();
+    collisionDetection();
     
         if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
             dx = -dx;    // this formulates whether the ball has hit the left or right walls of the canvas, if so, it reverses the ball's direction//
