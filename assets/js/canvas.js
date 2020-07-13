@@ -72,6 +72,9 @@ function drawRacket() {
     ctx.fill();
     ctx.closePath();
 }
+//below is the code that will loop thru all the blocks in the array and draw them on the canvas in their correct positions//
+
+
 // the below function clears the canvas, and calls for it to redraw the ball in a new position every 10 miliseconds//
 function draw(){
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
