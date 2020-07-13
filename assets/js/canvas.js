@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");  // this variable is the actual tool that all
 var x = canvas.width/2;
 var y = canvas.height -30;  // the x and y variables define a starting point for the ball at bottom center of the canvas//
 var dx = 2;
-var dy = -2;  //these variables give a small value to the x & y variables after every frame has been drawn on canvas, to make the ball move//
+var dy = -2;  //these variables add a small value to the x & y variables after every frame has been drawn on canvas, to make the ball move//
 var ballRadius = 10; //holds the radius of the drawn ball and is used for calculations//
 
 // below are our variables defining our racket to hit the ball with//
@@ -14,6 +14,22 @@ var racketX = (canvas.width-racketWidth) / 2;  // this gives the racket's starti
 // below are the control button's variables for the racket, set at false as they start out by not being pressed//
 var rightPressed = false;
 var leftPressed = false;
+// information on our block variables; rows, colunms,padding between them, where they should start being drawn on the canva//
+var blockRowCount = 3;
+var blockColumnCount = 5;
+var blockWidth = 75;
+var blockHeight = 20;
+var blockPadding = 10;
+var blockOffsetTop = 30;
+var blockOffsetLeft = 30;
+//below is a two-dimensional array containing our block columns, rows and the x and y positions to draw each block on the canvas as it loops thru the array//
+var blocks = [];
+for (var c=0; c<blockColumnCount; c++) {
+    blocks[c] = [];
+    for (var r=0; r<blockRowCount; r++) {
+        blocks[c] [r] = { x: 0, y: 0};
+    }
+}
 
 // the EventListeners below will tell us when buttons are pressed, allowing us to then run some code accordingly//
 document.addEventListener ("keydown", keyDownHandler, false);
