@@ -22,6 +22,7 @@ var blockHeight = 20;
 var blockPadding = 10;
 var blockOffsetTop = 30;
 var blockOffsetLeft = 30;
+var score = 0;
 //below is a two-dimensional array containing our block columns, rows and the x and y positions to draw each block on the canvas as it loops thru the array//
 var blocks = [];
 for (var c=0; c<blockColumnCount; c++) {

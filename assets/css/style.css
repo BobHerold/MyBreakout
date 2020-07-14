@@ -1,6 +1,6 @@
 * { padding: 0; margin: 0; }
 
-/* this is our HTML5 drawing element upon which we will place our blocks, ball, paddle, etc.*/
+/* this is our HTML5 drawing element upon which we will place our blocks, ball, racket, etc.*/
 canvas { background: #ffca7a; 
          display: block;
          margin: 0 auto;
