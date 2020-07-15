@@ -32,9 +32,11 @@ for (var c=0; c<blockColumnCount; c++) {
     }
 }
 
-// the EventListeners below will tell us when buttons are pressed, allowing us to then run some code accordingly//
+// the EventListeners below will tell us when buttons are pressed or the mouse is moved, allowing us to then run some code accordingly//
 document.addEventListener ("keydown", keyDownHandler, false);
 document.addEventListener ("keyup", keyUpHandler, false);
+document.addEventListener("mousemove", mouseMoveHandler, false);
+
 
 //function below will execute the code when a key is pressed down//
 function keyDownHandler (e) {
@@ -52,6 +54,13 @@ function keyUpHandler(e) {
     }
     else if (e.key == "Left" || e.key == "ArrowLeft") {
         leftPressed = false;
+    }
+}
+//this code anchors our racket movement to the mouse movement//
+function mouseMoveHandler(e) {
+    var relativeX =e.clientX-canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        racketX = relativeX -racketWidth/2;
     }
 }
 //below code is our collision detection for our blocks; if center of ball is within 4 coordinates of a block, block will break, ball will change direction, block will disappear//
