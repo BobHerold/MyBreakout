@@ -165,8 +165,8 @@ function draw() {
                 else {  //this will subtract one life and reset the game, unless there are no lives left//
                     x = canvas.width/2;
                     y = canvas.height-30;
-                    dx = 2;
-                    dy = -2;
+                    dx = 3;
+                    dy = -3;
                     racketX = (canvas.width-racketWidth)/2;
                 }
             }
@@ -187,6 +187,6 @@ function draw() {
     
     x += dx;
     y += dy;
-    requestAnimationFrame(draw);
+    requestAnimationFrame(draw); //this is a loop that gives control of the draw function (refreshing the frame) to the browser//
 }
  draw();
