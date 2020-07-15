@@ -23,6 +23,7 @@ var blockPadding = 10;
 var blockOffsetTop = 30;
 var blockOffsetLeft = 30;
 var points = 0;
+var lives = 3;
 //below is a two-dimensional array containing our block columns, rows and the x and y positions to draw each block on the canvas as it loops thru the array//
 var blocks = [];
 for (var c=0; c<blockColumnCount; c++) {
@@ -126,6 +127,13 @@ function drawPoints() {
     ctx.fillStyle = "#0a2f35";
     ctx.fillText("Points: " +points, 8, 20);
 }
+// code below draws our "lives" on the canvas; -65 and 20 are the x and y positions of where this will be placed on the canvas--Top Right//
+function drawLives() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0a2f35";
+    ctx.fillText("Lives: " +lives, canvas.width-65, 20);
+}
+
 
 
 // the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every 10 miliseconds, also updates points on each frame//
@@ -136,6 +144,7 @@ function draw() {
     drawBall();
     drawRacket();
     drawPoints();
+    drawLives();
     collisionDetection();
     
         if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
@@ -149,12 +158,20 @@ function draw() {
                 dy = -dy;
             }
             else {
-            alert("GAME HAS ENDED"); // this happens when the ball hits the bottom of the canvas and not the racket//
-            document.location.reload();
-            clearInterval(interval); //Needed for Chrome to end game//
+                lives--;
+                if(!lives) {
+                    alert("GAME HAS ENDED"); // this happens when the ball hits the bottom of the canvas and not the racket, or there are no lives left//
+                    document.location.reload();  
+                }
+                else {  //this will subtract one life and reset the game, unless there are no lives left//
+                    x = canvas.width/2;
+                    y = canvas.height-30;
+                    dx = 2;
+                    dy = -2;
+                    racketX = (canvas.width-racketWidth)/2;
+                }
             }
         }
-
         if (rightPressed) {
             racketX += 7; //this will move our racket 7px to the right//
             if (racketX + racketWidth > canvas.width) {
