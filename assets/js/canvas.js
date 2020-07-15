@@ -77,7 +77,6 @@ function collisionDetection() {
                     if(points == blockRowCount*blockColumnCount) { // this line calculates whether all blocks have been broken//
                         alert("YOU WON, CONGRATS!");
                         document.location.reload(); //this reloads the page and starts game again when you click on the alert//
-                        clearInterval(interval); //needed for Chrome to end game//
                     }
                 }
             }
@@ -136,7 +135,7 @@ function drawLives() {
 
 
 
-// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every 10 miliseconds, also updates points on each frame//
+// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every frame request, also updates points on each frame//
 function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
 
@@ -188,6 +187,6 @@ function draw() {
     
     x += dx;
     y += dy;
-
+    requestAnimationFrame(draw);
 }
- var interval = setInterval (draw, 10);
+ draw();
