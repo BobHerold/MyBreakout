@@ -61,9 +61,14 @@ function collisionDetection() {
             var b = blocks[c][r];
             if(b.status == 1) {
                 if(x > b.x && x < b.x+blockWidth && y > b.y && y < b.y+blockHeight) {
-                dy = -dy;
-                b.status = 0;  
-                points++;  // this will update our points each time status tellls us that a block has been broken//
+                    dy = -dy;
+                    b.status = 0;  
+                    points++;  // this will update our points each time status tellls us that a block has been broken//
+                    if(points == blockRowCount*blockColumnCount) { // this line calculates whether all blocks have been broken//
+                        alert("YOU WON, CONGRATS!");
+                        document.location.reload(); //this reloads the page and starts game again when you click on the alert//
+                        clearInterval(interval); //needed for Chrome to end game//
+                    }
                 }
             }
         }
