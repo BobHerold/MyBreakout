@@ -22,7 +22,7 @@ var blockHeight = 20;
 var blockPadding = 10;
 var blockOffsetTop = 30;
 var blockOffsetLeft = 30;
-var score = 0;
+var points = 0;
 //below is a two-dimensional array containing our block columns, rows and the x and y positions to draw each block on the canvas as it loops thru the array//
 var blocks = [];
 for (var c=0; c<blockColumnCount; c++) {
@@ -62,7 +62,8 @@ function collisionDetection() {
             if(b.status == 1) {
                 if(x > b.x && x < b.x+blockWidth && y > b.y && y < b.y+blockHeight) {
                 dy = -dy;
-                b.status = 0;
+                b.status = 0;  
+                points++;  // this will update our points each time status tellls us that a block has been broken//
                 }
             }
         }
@@ -105,15 +106,22 @@ function drawBlocks() {
         }
     }
 }
+// this function will track our points for each block that is broken, the 8, 20 parameters are the coordinates where this will be placed on the canvas//
+function drawPoints() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0a2f35";
+    ctx.fillText("Points: " +points, 8, 20);
+}
 
 
-// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every 10 miliseconds//
+// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every 10 miliseconds, also updates points on each frame//
 function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
 
     drawBlocks();
     drawBall();
     drawRacket();
+    drawPoints();
     collisionDetection();
     
         if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
