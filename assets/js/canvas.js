@@ -37,6 +37,10 @@ for (var c=0; c<blockColumnCount; c++) {
 document.addEventListener ("keydown", keyDownHandler, false);
 document.addEventListener ("keyup", keyUpHandler, false);
 document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addEventListener('touchstart', process_touchstart, false);
+document.addEventListener('touchmove', process_touchmove, false);
+document.addEventListener('touchcancel', process_touchcancel, false);
+document.addEventListener('touchend', process_touchend, false);
 
 
 //function below will execute the code when a key is pressed down//
@@ -64,6 +68,14 @@ function mouseMoveHandler(e) {
         racketX = relativeX -racketWidth/2;
     }
 }
+// code for touch screens//
+function process_touchstart(e) {
+    var relativeX =e.clientX-canvas.offsetLeft;
+    if(relativeX > 0 && relativeX < canvas.width) {
+        racketX = relativeX -racketWidth/2;
+    }
+} 
+
 //below code is our collision detection for our blocks; if center of ball is within 4 coordinates of a block, block will break, ball will change direction, block will disappear//
 function collisionDetection() {
     for (var c=0; c<blockColumnCount; c++) {
