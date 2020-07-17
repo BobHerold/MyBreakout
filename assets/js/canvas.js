@@ -22,7 +22,7 @@ var blockHeight = 20;
 var blockPadding = 10;
 var blockOffsetTop = 30;
 var blockOffsetLeft = 30;
-var points = 0;
+var score = 0;
 var lives = 3;
 //below is a two-dimensional array containing our block columns, rows and the x and y positions to draw each block on the canvas as it loops thru the array//
 var blocks = [];
@@ -75,8 +75,8 @@ function collisionDetection() {
                 if(x > b.x && x < b.x+blockWidth && y > b.y && y < b.y+blockHeight) {
                     dy = -dy;
                     b.status = 0;  
-                    points++;  // this will update our points each time status tellls us that a block has been broken//
-                    if(points == blockRowCount*blockColumnCount) { // this line calculates whether all blocks have been broken//
+                    score++;  // this will update our score each time status tells us that a block has been broken//
+                    if(score == blockRowCount*blockColumnCount) { // this line calculates whether all blocks have been broken//
                         alert("YOU WON, CONGRATS!");
                         document.location.reload(); //this reloads the page and starts game again when you click on the alert//
                     }
@@ -108,7 +108,7 @@ function drawRacket() {
 function drawBlocks() {
     for(var c=0; c<blockColumnCount; c++) {
         for(var r=0; r<blockRowCount; r++) {
-            if(blocks[c] [r].status ==1) { //this line checks status to see if block had a collision, it it's 1 then draw the block, 0 and it was hit by ball//
+            if(blocks[c] [r].status ==1) { //this line checks status to see if block had a collision, if it's 1 then draw the block, 0 and it was hit by ball//
                 var blockX = (c*(blockWidth+blockPadding)) +blockOffsetLeft; //this formula gives us the block's x position in each column//
                 var blockY = (r*(blockHeight+blockPadding)) +blockOffsetTop; //this gives us the Y or height position of each block in each row//
                 blocks[c] [r].x = blockX;
@@ -123,10 +123,10 @@ function drawBlocks() {
     }
 }
 // this function will track our points for each block that is broken, the 8, 20 parameters are the coordinates where this will be placed on the canvas//
-function drawPoints() {
+function drawScore() {
     ctx.font = "16px Arial";
     ctx.fillStyle = "#0a2f35";
-    ctx.fillText("Points: " +points, 8, 20);
+    ctx.fillText("Score: "+score, 8, 20);
 }
 // code below draws our "lives" on the canvas; -65 and 20 are the x and y positions of where this will be placed on the canvas--Top Right//
 function drawLives() {
@@ -137,14 +137,14 @@ function drawLives() {
 
 
 
-// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every frame request, also updates points on each frame//
+// the below function clears the canvas, and calls for it to redraw the ball, blocks & racket in a new position every frame request, also updates score on each frame//
 function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height); //this clears the canvas content after each frame is run so that you don't see the previous position of the ball//
 
     drawBlocks();
     drawBall();
     drawRacket();
-    drawPoints();
+    drawScore();
     drawLives();
     collisionDetection();
     
