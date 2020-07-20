@@ -115,7 +115,22 @@
         <li>
             <p>Created a Github account at https://github.com My account url; https://github.com/BobHerold</p>
         </li>
-    </ol>    
+        <li>
+            <p>I uploaded all files to my Github repository located at this url; https://github.com/BobHerold/MyBreakout which is for this individual project.</p>
+        </li>
+        <li>
+            <p>To publish the project to see it on the web, I then went into the Settings on my respository, scrolled down to the heading, GitHub Pages. Under the Source setting, I used the drop-down menu to select master branch as a publishing source and saved it. Refreshed the github page, and you are then given a url where your page is published; Your site is published at https://bobherold.github.io/MyBreakout/</p>
+        </li>
+        <li>
+            <p>To run this code on your local machine, you would go to my respository at https://github.com/BobHerold/MyBreakout and on the home page on the right hand side just above all the files, you will see a green button that says, "Clone or download", this button will give you options to clone with HTTPS, open in desktop or download as a zip file. To continue with cloning, you would;</p>
+        </li>
+    </ol>
+        <ul>
+            <li>Open Git Bash</li>
+            <li>Change the current working directory to the location where you want the cloned directory to be made.</li>
+            <li>Type git clone, and then paste this URL; https://github.com/BobHerold/MyBreakout.git Press Enter. Your local clone will be created.</li>
+        </ul> 
+            <p>For more information about the above process; https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository</p>   
 
 
  
