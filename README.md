@@ -20,3 +20,5 @@
 
       * As a player it is pretty much self explanatory and short in play time.
    </p>
+
+   <h2>Features</h2>
