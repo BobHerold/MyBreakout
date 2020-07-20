@@ -52,8 +52,49 @@
     <ol>
         <li>
             <p><strong>HTML, or Hyper Text Markup Language:</strong>Used to construct all the pages of this web site. For further info on this language;
-https://developer.mozilla.org/en-US/docs/Web/HTML</p>
+             https://developer.mozilla.org/en-US/docs/Web/HTML</p>
         </li>
-        
+        <li>
+            <p><strong>CSS, or Cascading Style Sheets:</strong>: Is used to style various elements on a web page via coloring, fonts, spacing, etc. For further info, see this link; https://www.w3.org/Style/CSS/Overview.en.html
+            </p>
+        </li>
+        <li>
+            <p><strong>JavaScript</strong>: A lightweight, interpreted, or just-in-time compiled programming language with first-class functions. 
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript
+            </p>
+        </li>
+        <li>
+            <p><strong>Bootstrap:</strong> A CSS framework that assists the programmer in creating responsive, mobile first front-end web sites. https://getbootstrap.com/
+            </p>
+        </li>
+        <li>
+            <p><strong>Visual Studio Code:</strong>Is a programming code editor created by Microsoft that I used extensively. It allows programmers to create, save and edit their code on their own pc's. https://code.visualstudio.com/
+            </p>
+        </li>
+        <li>
+            <p><strong>SourceTree:</strong>A software application that runs on your computer that simplifies saving your programming code from your PC up to an oline respository like Github. You do not have to use a command line interface when using this application. For further info; https://www.sourcetreeapp.com/
+            </p>
+        </li>
+        <li>
+           <p><strong>Git:</strong> A version control system for tracking changes in source code during software development. https://git-scm.com/
+           </p>
+        </li>
+        <li>
+            <p><strong>GitHub:</strong>A company that provides hosting for software development version control using Git. It is a subsidiary of Microsoft. https://github.com
+            </p>
+        </li>
+        <li>
+            <p><strong>Chrome DevTools:</strong>A set of web developer tools built directly into the Google Chrome browser. I used these tools constantly thoughout the development cycle. https://developers.google.com/web/tools/chrome-devtools
+            </p>
+        </li>
+        <li>
+            <p><strong>W3C Markup Validation Service:</strong>Used to run all html and css code thru a validation process looking for errors; https://validator.w3.org/
+            </p>
+        </li>
+        <li>
+            <p><strong>JSHint:</stong>JSHint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
+            https://jshint.com/
+            </p>
+        </li>
     </ol>
 
