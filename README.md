@@ -16,9 +16,7 @@
     <p>
     This site is designed for someone who wants to play a simple, somewhat challenging game.
 
+      * As a user, I want this game to be easily playable.
 
-    ..* As a user, I want this game to be easily playable.
-
-    
-    ..* As a player it is pretty much self explanatory and short in play time.
+      * As a player it is pretty much self explanatory and short in play time.
    </p>
