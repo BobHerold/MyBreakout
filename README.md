@@ -130,7 +130,16 @@
             <li>Change the current working directory to the location where you want the cloned directory to be made.</li>
             <li>Type git clone, and then paste this URL; https://github.com/BobHerold/MyBreakout.git Press Enter. Your local clone will be created.</li>
         </ul> 
-            <p>For more information about the above process; https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository</p>   
+            <p>For more information about the above process; https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository</p> 
+<h2>Credits</h2>
+    <h3>Content</h3>
+        <ol>
+            <li>
+                <p> All code came directly from this tutorial; 2D breakout game using pure JavaScript, located at this Url; https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript  
+                   I have modified it somewhat, changing some variable names, colors, etc.  I have tried to comment on each section throughout the game to explain all processes.</p>
+            </li>
+        </ol>
+                      
 
 
  
