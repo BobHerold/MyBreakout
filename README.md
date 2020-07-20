@@ -139,9 +139,30 @@
                    I have modified it somewhat, changing some variable names, colors, etc.  I have tried to comment on each section throughout the game to explain all processes.</p>
             </li>
         </ol>
-                      
-
-
- 
-</html>    
+    <h3>Media</h3>
+        <ol>
+            <li>
+                <p>screenshot .jpg from http://ami.responsivedesign.is/</p>
+            </li>
+            <li>
+                <p>mockups.jpg from my iPhone 11/</p>
+            </li>
+            <li>
+                <p>Color paletted used came from; https://colors.muz.li/palette/12492f/0a2f35/f56038/f7a325/ffca7a</p>
+            </li>
+         </ol>
+     <h3>Acknowledgements</h3>
+         <ul>
+             <li>
+                 <p>Code Institute's Claire, for her phone calls and support in getting me over a terrible block I was having in completing this project.  I asked for an extension 3 different times and struglled greatly with this project.  All other Tutors & support people who have assisted me from the Code Institute, along with CI's Slack channel.</p>
+             </li>
+              <li>
+                 <p>My Mentor Sandeep Aggarwal for inspiration, programming help and great advice. https://www.linkedin.com/in/asandeepme/</p>
+             </li>
+             <li>
+                 <p>My son Dakota Herold for his support, advice and recommnendations. https://www.linkedin.com/in/dakotaherold/</p>
+             </li>
+         </UL>
+               
+ </html>    
 
