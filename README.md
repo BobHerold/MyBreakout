@@ -9,7 +9,8 @@
    It is based entirely on JavaScript and rendered on the HTML5 canvas element.
 
    I chose this game for my milestone project 2 for the Full Stack Developer course from the Code Institute; https://codeinstitute.net/
-   This is a simple game that uses a lot of javascript functionality in it's creation and execution.
+   This is a simple game that uses a lot of javascript functionality in it's creation and execution.  I tried to build it as responsive as possible, however I regret that 
+   I was unable to get touch controls for touch screen devices working for this implementation.
 </p>
 
 <h2>UX</h2>
