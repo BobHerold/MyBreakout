@@ -92,7 +92,7 @@ function collisionDetection() {
 function drawBall() {
     ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2); //this sets the x and y axis of ball, its radius and circumference, and starting angle, actually draws the circle of the ball//
-    ctx.fillStyle = "#f56038" //color of the ball//
+    ctx.fillStyle = "#f56038"; //color of the ball//
     ctx.fill();
     ctx.closePath();
 }

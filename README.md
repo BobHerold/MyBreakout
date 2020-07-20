@@ -48,4 +48,12 @@
             <p> Touch Screen controls of the racket and the game in general</p>
         </lis>
     </ul>
-    
+<h2>Technologies Used</h2> 
+    <ol>
+        <li>
+            <p><strong>HTML, or Hyper Text Markup Language:</strong>Used to construct all the pages of this web site. For further info on this language;
+https://developer.mozilla.org/en-US/docs/Web/HTML</p>
+        </li>
+        
+    </ol>
+
