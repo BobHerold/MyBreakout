@@ -15,10 +15,16 @@
 <h2>UX</h2>
     <p>
     This site is designed for someone who wants to play a simple, somewhat challenging game.
+    </p>
+<h4>User Stories</h4>
+    <ul>
+       <li>
+           <p>  * As a user, I want this game to be easily playable.</p>
+       </li>
+       <li>
+           <p>  * As a player it is pretty much self explanatory and short in play time.</p>
+       </li>
 
-      * As a user, I want this game to be easily playable.
-
-      * As a player it is pretty much self explanatory and short in play time.
-   </p>
+     
 
    <h2>Features</h2>
