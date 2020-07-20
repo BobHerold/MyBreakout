@@ -101,7 +101,13 @@
 <h2>Testing</h2>
     <ol>
         <li>
-          <p>http://ami.responsivedesign.is/  has been used to see how the game scales on different size screens on Apple devices.  It looks pretty good on all screen sizes, however I was unable to get touch working for touch screen devices, to control the racket.</p>  
+          <p>http://ami.responsivedesign.is/  has been used to see how the game scales on different size screens on Apple devices.  It looks pretty good on all screen sizes, however I was unable to get touch working for touch screen devices, to control the racket. I also checked it on my iPhone 11.</p>  
+        </li>
+        <li>
+            <p><strong>Desktop</strong></p>
+                <ul>
+                    <li> The game works correctly on Google Chrome, Internet Edge & Mozilla Firefox browsers</li>
+                </ul>
         </li>
     </ol>
 
