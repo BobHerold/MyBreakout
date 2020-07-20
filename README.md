@@ -19,12 +19,12 @@
 <h4>User Stories</h4>
     <ul>
        <li>
-           <p>  * As a user, I want this game to be easily playable.</p>
+           <p>  As a user, I want this game to be easily playable.</p>
        </li>
        <li>
-           <p>  * As a player it is pretty much self explanatory and short in play time.</p>
+           <p>  As a player it is pretty much self explanatory and short in play time.</p>
        </li>
 
      
 
-   <h2>Features</h2>
+<h2>Features</h2>
