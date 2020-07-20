@@ -145,10 +145,10 @@
                 <p>screenshot .jpg from http://ami.responsivedesign.is/</p>
             </li>
             <li>
-                <p>mockups.jpg from my iPhone 11/</p>
+                <p>mockups.jpg from my iPhone 11</p>
             </li>
             <li>
-                <p>Color paletted used came from; https://colors.muz.li/palette/12492f/0a2f35/f56038/f7a325/ffca7a</p>
+                <p>Color palette used came from; https://colors.muz.li/palette/12492f/0a2f35/f56038/f7a325/ffca7a</p>
             </li>
          </ol>
      <h3>Acknowledgements</h3>
