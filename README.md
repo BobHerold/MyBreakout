@@ -110,6 +110,12 @@
                 </ul>
         </li>
     </ol>
+<h2>Deployment</h2>
+    <ol>
+        <li>
+            <p>Created a Github account at https://github.com My account url; https://github.com/BobHerold</p>
+        </li>
+    </ol>    
 
 
  
