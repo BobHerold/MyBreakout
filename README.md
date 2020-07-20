@@ -92,7 +92,7 @@
             </p>
         </li>
         <li>
-            <p><strong>JSHint:</stong>JSHint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
+            <p><strong>JSHint:</strong>JSHint is a static code analysis tool used in software development for checking if JavaScript source code complies with coding rules.
             https://jshint.com/
             </p>
         </li>
