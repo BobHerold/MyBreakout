@@ -1,6 +1,7 @@
+<html lang="en">
 <h1>MyBreakout Game</h1>
 <p>
-   <a target="_blank">
+   <a target="_blank" href="https://github.com/BobHerold/MyBreakout/tree/master/assets/images">
    <img src="assets/images/MyBreakoutAppleDevicesView.png"
    alt="Apple Devices picture of the game">
    </a>
@@ -8,7 +9,7 @@
    I have used the code for this project directly from a tutorial from the Mozilla Developer's Network; https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
    It is based entirely on JavaScript and rendered on the HTML5 canvas element.
 
-   I chose this game for my milestone project 2 for the Full Stack Developer course from the Code Institute; https://codeinstitute.net/
+   I chose this game for my milestone project 2 for the Full Stack Developer course from the Code Institute:https://codeinstitute.net/
    This is a simple game that uses a lot of javascript functionality in it's creation and execution.  I tried to build it as responsive as possible, however I regret that 
    I was unable to get touch controls for touch screen devices working for this implementation.
 </p>
@@ -46,7 +47,7 @@
     <ul>
         <li>
             <p> Touch Screen controls of the racket and the game in general</p>
-        </lis>
+        </li>
     </ul>
 <h2>Technologies Used</h2> 
     <ol>
@@ -97,4 +98,5 @@
             </p>
         </li>
     </ol>
+</html>    
 
