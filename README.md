@@ -98,5 +98,14 @@
             </p>
         </li>
     </ol>
+<h2>Testing</h2>
+    <ol>
+        <li>
+          <p>http://ami.responsivedesign.is/  has been used to see how the game scales on different size screens on Apple devices.  It looks pretty good on all screen sizes, however I was unable to get touch working for touch screen devices, to control the racket.</p>  
+        </li>
+    </ol>
+
+
+ 
 </html>    
 
