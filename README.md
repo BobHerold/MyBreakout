@@ -24,7 +24,27 @@
        <li>
            <p>  As a player it is pretty much self explanatory and short in play time.</p>
        </li>
-
-     
-
+     </ul>  
 <h2>Features</h2>
+<h3>Existing Features</h3>
+    <ul>
+        <li>
+           <p> HTML5 canvas with blocks, racket and ball. </p>
+        </li>   
+        <li>
+           <p> Controllable racket via keyboard arrow keys, or mouse.</p>
+        </li>
+        <li>
+           <p> Score and Lives counters</p>
+        </li>
+        <li>
+            <p> Collision detection</p>
+        </li>   
+    </ul>
+<h3>Features Left to Implement</h3>
+    <ul>
+        <li>
+            <p> Touch Screen controls of the racket and the game in general</p>
+        </lis>
+    </ul>
+    
